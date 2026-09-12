@@ -1,0 +1,16 @@
+# python goblin droppings
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# checkpoints are fat. goblin no commit half a gig of weights
+models/*.pth
+models/*.pth.tmp
+
+# os junk
+.DS_Store

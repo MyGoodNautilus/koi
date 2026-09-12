@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "koi-lm"
+version = "0.2.0"
+description = "Koi: a small hybrid language model. Gated DeltaNet linear attention on odd layers, local dense attention on even layers."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["torch>=2.1", "numpy", "tqdm"]
+
+[tool.setuptools]
+packages = ["koi"]
