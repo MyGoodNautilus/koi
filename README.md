@@ -81,7 +81,7 @@ After a brief (~10 minutes) training run, with a 4060 laptop GPU, it trained as 
 | Loss     | ~1.4 |
 | PPL      | ~3.9   |
 
-Output:
+## Output:
 ```
 "I can't," she had's are spitic. At didn't blinking. Then she pastood surjost take his chout. "I thought back to collapse."
 ```
