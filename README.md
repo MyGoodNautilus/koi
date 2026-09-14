@@ -73,6 +73,20 @@ cd koi
 pip install -r requirements.txt
 ```
 
+## Training Results
+After a brief (~10 minutes) training run, with a 4060 laptop GPU, it trained as following.
+| Metric   | Value  |
+|----------|--------|
+| Parameters (we downscaled the model)     | ~22M |
+| Loss     | ~1.4 |
+| PPL      | ~3.9   |
+Output:
+```
+"I can't," she had's are spitic. At didn't blinking. Then she pastood surjost take his chout. "I thought back to collapse."
+```
+While, this output is absolutely terrible, it did learn the dataset, earn a ~3.9 perplexity, AND learned structure formatting. This is, widely regarded, as a plus
+
+
 ## Notes
 - The Gated DeltaNet recurrence math runs in fp32 with bf16 autocast around it;
   blocked window attention runs in the autocast dtype with fp32 decode scores.
