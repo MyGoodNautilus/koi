@@ -78,8 +78,9 @@ After a 5 hour training run, we achieved these results.
 | Metric   | Value  |
 |----------|--------|
 | Parameters    | 126.3M |
-| Loss     | ~1.4 |
-| PPL      | ~3.9   |
+| Loss     | ~2.5 |
+| PPL      | ~12   |
+| Vocab      | ~50k   |
 
 ## Output:
 ```
