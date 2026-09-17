@@ -96,7 +96,7 @@ For comparison, gpt-2-small gets roughly 20 t/s on GPUs like mine (notably, with
 
 A flagship data-center GPU has roughly 20.8× the raw bandwidth of my laptop GPU, which puts a theoretical high-end target around 12k t/s. If we translate that to something like an 18B model, the approximate MoE size of flagship models, that works out to roughly 80 t/s without requiring insane levels of optimization.
 
-As future work goes on, I expect to double or triple t/s.
+Take this all with a grain of salt, as these were taken linearly, and comparisons were made without assuming optimized attention mechanisms in either model. As future work goes on, I expect to double or triple t/s.
 
 
 ## Notes
