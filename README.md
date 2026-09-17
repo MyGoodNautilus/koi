@@ -74,18 +74,29 @@ pip install -r requirements.txt
 ```
 
 ## Training Results
-After a brief (~10 minutes) training run, with a 4060 laptop GPU, it trained as following.
+After a 5 hour training run, we achieved these results.
 | Metric   | Value  |
 |----------|--------|
-| Parameters (we downscaled the model)     | ~22M |
+| Parameters    | 126.3M |
 | Loss     | ~1.4 |
 | PPL      | ~3.9   |
 
 ## Output:
 ```
-"I can't," she had's are spitic. At didn't blinking. Then she pastood surjost take his chout. "I thought back to collapse."
+He said to all of them. "Good idea, when you look like you're giving a real-life bastard to you when you want. That's a huge plus. It's not a long-term life long run."
 ```
-While, this output is absolutely terrible, it did learn the dataset, earn a ~3.9 perplexity, AND learned structure formatting. This is, widely regarded, as a plus
+This output, while not traditionally excellent, I would regard it's definitely noticeably decent compared to earlier versions.
+
+## Performance
+~100 t/s at FP32 precision, with constant VRAM usage and nearly constant speed.
+
+Using general scaling laws, Q5_K_M (~5.5 bpw) should get us upwards of ~600 t/s on my laptop GPU.
+
+For comparison, gpt-2-small gets roughly 20 t/s on GPUs like mine (notably, with only a 1024-token context that explodes in VRAM). This suggests that the architecture provides substantial speed improvements while maintaining ~95% recall accuracy through attention-logit calculations.
+
+A flagship data-center GPU has roughly 20.8× the raw bandwidth of my laptop GPU, which puts a theoretical high-end target around 12k t/s. If we translate that to something like an 18B model, the approximate MoE size of flagship models, that works out to roughly 80 t/s without requiring insane levels of optimization.
+
+As future work goes on, I expect to double or triple t/s.
 
 
 ## Notes
